@@ -1,0 +1,161 @@
+@charset "UTF-8";
+.header {
+    position: relative;    /*要素の配置を相対座標に指定*/
+    width: 100%;           /*要素の幅を100%に*/
+    height: 0;
+    padding-bottom: 100%;
+    background: url(../img/top/hero_top.jpg) no-repeat center center/cover   /*背景画像を領域を埋めるように、中央に配置*/    
+}
+
+@media print, screen and (min-width: 768px) {
+    .header {
+        height: 400px;
+        padding-bottom: 0;
+    }
+}
+
+.logo{
+    width: 60px;
+    padding: 10px;        /*要素の内余白を10pxに*/
+    background: #fff;   
+    position: absolute;   /*要素の配置を絶対座標に指定*/
+    top: 0;               /*上部分を基準点から0の位置に*/
+    left: 20px;           /*左部分を基準点から20pxの位置に*/
+}
+
+@media print, screen and (min-width: 768px) {
+    .logo {
+        width: 110px;
+        padding: 20px;
+        left: 40px;
+    }
+}
+
+.catch-copy, .page-title {
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS 明朝", serif;
+    font-size: 6vw;    /*フォントをビューボードの6%に*/
+    font-weight: bold;
+    position: absolute;   /*要素の配置位置を絶対座標に指定*/
+    top: 50%;             /*上部分を基準点から50%の位置に*/
+    left: 0%;             /*左部分を基準点から0の位置に*/
+    -webkit-transfrom: translate(0, -50%);    /*要素の位置を50%分だけ上に*/
+    transform: translate(0, -50%);        /*要素の位置を50%分だけ上に*/
+}
+
+.catch-copy span, .page-title span {
+    border-bottom: 3px solid #fff;   /*下部のボーダーを3pxの太さ、実線、白色に*/
+    padding-bottom: 4px;         /*下部の内余白を4pxに*/
+}
+
+@media print, screen and (min-width: 768px) {
+    .catch-copy, .page-title {
+        font-size: 50px;
+    }
+}
+
+.heading02 {
+    text-align: center;  
+    font-size:16px;
+    font-weight: bold;   /*文字を太文字に*/
+    color: #000;       /*文字色を黒に*/
+    font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS 明朝", serif;   /*フォントの種類を指定*/
+    margin-bottom: 20px; /*下部分の外余白を20pxに*/
+}
+
+@media print, screen and (min-width: 768px) {
+    .heading02 {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+.heading02 span {
+    border-bottom: 3px solid #000; /*下部分の罫線を3px、実線、黒色に*/
+    padding-bottom: 4px;
+}
+
+.lead{
+    font-size: 14px;
+    line-height: 2.0;    /*行の高さをフォントサイズの2.0倍に*/
+}
+
+.btn {
+    display: block;      /*表示形式をブロックに*/
+    text-align: center;  /*文字を中央ぞろえに*/
+    width: 200px;        /*要素の横幅を200pxに*/
+    margin: 0 auto 60px; /*要素の外余白を上0、左右自動、下60pxに*/
+    border: 2px solid #000;
+    text-decoration: none; /*文字の装飾をなしに*/
+    padding: 13px 0 12px;
+    font-weight: bold;
+}
+
+@media print, screen and (min-width: 768px) {
+    .btn {
+        width: 400px;
+        padding: 20px 0;
+        font-size: 14px;
+    }
+}
+
+.footer {                /*class="footer"の要素のスタイル指定*/
+    padding: 15px 10px;  /*内余白を上下15px,左右20pxに*/
+}
+
+@media print, screen and (min-width: 768px) {
+    .footer {
+        padding: 30px 10px;
+    }
+}
+
+.copy {                  /*class="copy"の要素のスタイル指定*/
+    text-align: center;  /*文字を中央ぞろえに*/
+    font-size: 1.0rem;   /*文字サイズを1remに*/
+}
+
+.globalnav {
+    position: relative;
+    padding: 0 10px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.globalnav li {
+    display: table-cell;   /*表示形式をテーブルセル形式に*/
+    text-align: center;
+}
+
+.globalnav li:not(:first-child) {
+    border-left: 1px solid #000;   /*罫線左を1px、実線、黒色に*/
+}
+
+.globalnav li a {
+    font-size: 1.3rem;
+    display: block;
+    background: #fff;
+    text-decoration: none;
+    padding: 15px 0;
+}
+
+.globalnav li a:hover {   /*マウスポインタが要素上に来た時のスタイルを指定*/
+    opacity: 1;   /*府透明度を1に*/
+}
+
+@media print, screen and (min-width: 768px) {
+    .globalnav li a:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+
+.globalnav-list {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: table;   /*表示形式をテーブル形式に*/
+    table-layout: fixed;   /*テーブルレイアウトを固定に*/
+    border: 1px solid #000;
+}
